@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --lightblue-400: #E8E8E8;
+  --darkblue-300: #0A3871;
+  --lighgray: #D8DFE8;
+  --gray-400: #495057;
+}
+
+body {
+  background: var(--lightblue-400);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 30px;
+  width: 120px;
+  height: 48px;
+}
+
+.outputArea {
+  width: 330px;
+  height: 600px;
+  background: #f0f0f0;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  margin-right: 10vw;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.inputArea {
+  position: absolute;
+  width: 700px;
+  height: 800px;
+  margin-left: 270px;
+  top: 100px;
+}
+
+textarea {
+  resize: none;
+}
+
+#msg::-webkit-input-placeholder {
+  color: var(--darkblue-300);
+}
+
+#msg {
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 150%;
+  padding: 14px;
+  resize: none;
+  width: 550px;
+  height: 400px;
+  background: var(--lightblue-400);
+  border: 1px solid var(--darkblue-300);
+  border-radius: 0.4rem;
+  color: var(--darkblue-300);
+}
+
+.infoDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.infoIcon {
+  color: var(--gray-400);
+  width: 16px;
+  height: 16px;
+}
+
+.infoDiv p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 150%;
+  color: var(--gray-400);
+  margin-left: 2px;
+}
+
+.butDiv {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 550px;
+  justify-content: space-between;
+}
+
+#criptoBut {
+  cursor: pointer;
+  padding: 10px;
+  gap: 8px;
+
+  width: 250px;
+  height: 50px;
+
+  background: var(--darkblue-300);
+  border: 1px solid var(--darkblue-300);
+  border-radius: 24px;
+  color: white;
+}
+
+#criptoBut:hover {
+  transition: all 300ms;
+  background-color: var(--lighgray);
+  color: var(--darkblue-300);
+}
+
+#decriptBut {
+  cursor: pointer;
+  padding: 10px;
+  gap: 8px;
+
+  width: 250px;
+  height: 50px;
+
+  background: var(--lighgray);
+  border: 1px solid var(--lighgray);
+  border-radius: 24px;
+  color: var(--darkblue-300);
+}
+
+#decriptBut:hover {
+  transition: all 300ms;
+  background-color: var(--darkblue-300);
+  color: var(--lighgray);
+}
+
+.cont1{
+  width: 240px;
+  margin: 0 auto;
+}
+
+.wait {
+  margin: 0 auto;
+  width: 230px;
+  height: 304px;
+}
+
+.outputArea h2 {
+  font-family: 'Inter';
+}
+
+.outputArea p {
+  font-family: 'Inter';
+  color: var(--gray-400);
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 180px;
+}
+
+.boxText textarea {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  border: 0;
+  font-size: 24px;
+  margin: 20px;
+  width: 300px;
+  height: 500px;
+}
+
+#copy {
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  bottom: 20px;
+  right: 170px;
+
+  width: 250px;
+  height: 50px;
+
+  background: var(--lighgray);
+  border: 1px solid var(--lighgray);
+  border-radius: 24px;
+  color: var(--darkblue-300);
+}
+
+#copy:hover {
+  transition: all 300ms;
+  background-color: var(--darkblue-300);
+  color: var(--lighgray);
+}
+
+@media (min-width: 600px) and (max-width: 1290px) {
+  body{
+      overflow-y: visible;
+  }
+
+  .container{
+      display: flex;
+      flex-direction: column;
+  }
+
+  .logo {
+      display: block;
+  }
+
+  .inputArea{
+      display: flex;
+      flex-direction: column;
+      margin-left: 75px;
+  }
+
+  #msg {
+      width: 600px;
+      height: 600px;
+  }
+
+  .butDiv {
+      width: 600px;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  #criptoBut {
+      width: 270px;
+      height: 58px;
+      border-radius: 24px;
+  }
+
+  #decriptBut {
+      width: 270px;
+      height: 58px;
+      border-radius: 24px;
+  }
+
+  .wait {
+      display: none;
+  }
+
+  .outputArea {
+      width: 600px;
+      height: fit-content;
+      margin-top: 700px;
+      margin-left: 75px;
+  }
+
+  .outputArea .cont1{
+      padding: 60px;
+  }
+
+  .outputArea textarea{
+      text-align: justify;
+      width: 480px;
+      height: 200px;
+  }
+
+}
+
+@media (min-width: 300px) and (max-width: 599px) {
+  body{
+      overflow-y: visible;
+  }
+
+  .container{
+      display: flex;
+      flex-direction: column;
+  }
+
+  .logo{
+      margin-left: 0;
+  }
+
+  .inputArea{
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+  }
+
+  #msg {
+      width: 48%;
+      height: 40vh;
+  }
+
+  .butDiv {
+      width: 337px;
+      display: flex;
+      flex-direction: column;
+  }
+
+  #criptoBut {
+      width: 320px;
+      height: 58px;
+      border-radius: 24px;
+  }
+
+  #decriptBut {
+      margin-top: 20px;
+      width: 320px;
+      height: 58px;
+      border-radius: 24px;
+  }
+
+  .wait {
+      display: none;
+  }
+
+  .outputArea {
+      width: 320px;
+      max-height: 400px;
+      margin-top: 550px;
+      margin-left: 30px;
+  }
+
+  .outputArea .cont1{
+      padding: 20px;
+  }
+
+  .outputArea textarea{
+      text-align: justify;
+      width: 280px;
+      max-height: 300px;
+  }
+
+}
